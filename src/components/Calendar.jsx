@@ -1,57 +1,36 @@
 import React, { Component } from 'react';
-import ReactLightCalendar from '@lls/react-light-calendar';
-import '@lls/react-light-calendar/dist/index.css';
+import DatePicker from 'react-datepicker';
 
-const DAY_LABELS = [
-  'Lunes',
-  'Martes',
-  'Miércoles',
-  'Jueves',
-  'Viernes',
-  'Sábado',
-  'Domingo',
-];
-const MONTH_LABELS = [
-  'Enero',
-  'Febrero',
-  'Marzo',
-  'Abril',
-  'Mayo',
-  'Junio',
-  'Julio',
-  'Agosto',
-  'Septiembre',
-  'Octubre',
-  'Noviembre',
-  'Diciembre',
-];
+import 'react-datepicker/dist/react-datepicker.css';
+
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 class Calendar extends Component {
   constructor(props) {
     super(props);
-    // Get initial startDate and endDate
-    this.state = {
-      startDate: props.startDate,
-      endDate: props.endDate
-    };
-  }
+    this.state = { startDate: new Date() };
+  };
 
-  onChange = (startDate, endDate) => this.setState({ startDate, endDate });
+  handleChange = (startDate) => {
+    this.setState({
+      startDate,
+    });
+  };
 
-  render = () => {
-    const { startDate, endDate } = this.state;
-
+  render() {
+    const { startDate } = this.state;
     return (
-      <ReactLightCalendar
-        dayLabels={DAY_LABELS}
-        monthLabels={MONTH_LABELS}
-        onChange={this.onChange}
-        startDate={startDate}
-        endDate={endDate}
-        {...this.props} // Add parent's additionnal props
+      <DatePicker
+        className='divCalendar'
+        selected={startDate}
+        onChange={this.handleChange}
+        minDate={new Date()}
+        dateFormat='dd/MM/yyyy'
+        placeholderText='Click to select a date'
       />
     );
-  };
+  }
 }
 
 export default Calendar;

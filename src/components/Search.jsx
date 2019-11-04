@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
+/* import CalendarRank from './CalendarRank'; */
 import Calendar from './Calendar';
 import Background from '../assets/images/background-home.jpg';
 import '../assets/styles/components/Search.scss';
 
 const Search = () => {
-
-  const [openCalendar, setOpenCalendar] = useState(false);
-  console.log('openCalendar', openCalendar);
 
   return (
     <section className='search' style={{ backgroundImage: `url(${Background})` }}>
@@ -19,17 +17,10 @@ const Search = () => {
           </div>
           <div>
             <label htmlFor=''>Fecha de llegada y salida</label>
-            {/* <button type='button' onClick={() => setOpenCalendar(!openCalendar)}>
-              Seleccionar Fecha
-            </button>
-            {openCalendar && (
-              <Calendar
-                disableDates={date => date < new Date().getTime()}
-              />
-            )} */}
-            <Calendar
+            {/* <CalendarRank
               disableDates={date => date < new Date().getTime()}
-            />
+            /> */}
+            <Calendar />
           </div>
           <div>
             <label htmlFor=''>Huéspedes</label>
