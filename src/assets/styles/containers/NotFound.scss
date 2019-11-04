@@ -1,0 +1,48 @@
+/*===== 404 ======*/
+.main404 {
+  height: calc(100vh - 160px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(#2e89e6, #88fff5);
+}
+
+.main404__title {
+  color: #ffffff;
+  font-size: 70px;
+  margin: 0px;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.main404__description {
+  color: #ffffff;
+  font-size: 25px;
+  margin: 0px;
+  animation-name: pulse;
+  animation-duration: 1s;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: auto;
+  }
+  to {
+    margin-left: 0%;
+    width: auto;
+  }
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

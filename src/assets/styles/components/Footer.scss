@@ -1,0 +1,17 @@
+@import '../Vars.scss';
+
+/* ======== Footer ===========*/
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: #70A0CC;
+  height: 80px;
+  width: 100%;
+}
+
+.footer a {
+  padding: 0 10px;
+  color: $white;
+  text-decoration: none;
+}

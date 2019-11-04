@@ -1,0 +1,17 @@
+@import 'Vars.scss';
+
+body {
+  margin: 0;
+  font-family: $Quicksand;
+  color: $black;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 160px);
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0px;
+}

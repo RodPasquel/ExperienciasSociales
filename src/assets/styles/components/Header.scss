@@ -1,0 +1,24 @@
+@import '../Vars.scss';
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #236099;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+img.header__img {
+  margin-left: 25px;
+  max-width: 60px;
+}
+
+.header--hamburger {
+  margin-right: 25px;
+  color: $white;
+  cursor: pointer;
+}

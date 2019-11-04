@@ -1,0 +1,73 @@
+@import '../Vars.scss';
+
+/* ======= Buscador ==========*/
+
+.search {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: #4e6c8a;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  /* padding: 20px 0; */
+  background-position: center;
+}
+.search__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid $white;
+  border-radius: 15px;
+  padding: 25px 40px;
+  min-height: 400px;
+  width: 300px;
+  left: 5%;
+  position: relative;
+}
+
+.search__title {
+  font-size: 1.6em;
+  text-align: center;
+  font-weight: 700;
+}
+
+.search__form > div {
+  margin-bottom: 15px;
+  label {
+    font-weight: 500;
+  }
+}
+
+.input {
+  width: 95%;
+  outline: none;
+  border: 2px solid $white;
+  font-size: 16px;
+  height: 25px;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-top: 5px;
+}
+.search__form div:last-child {
+  text-align: right;
+}
+.button {
+  font-size: 15px;
+  padding: 10px 30px;
+  border: 0px;
+  border-radius: 20px;
+  background: #CC716C;
+  font-weight: 700;
+  color: $white;
+}
+
+/* === Calendario === */
+
+.rlc-calendar {
+  background-color: $white;
+  width: 100%;
+  /* position: absolute;
+  top: 60px;
+  right: -300px; */
+}
