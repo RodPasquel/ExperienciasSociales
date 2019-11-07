@@ -1,4 +1,4 @@
-@import '../Vars.scss';
+@import "../Vars.scss";
 
 /* ======= Buscador ==========*/
 @mixin input {
@@ -53,7 +53,7 @@
   @include input;
 }
 
-.search__form div:last-child {
+.search__form > div:last-child {
   text-align: right;
 }
 .button {
@@ -61,7 +61,7 @@
   padding: 10px 30px;
   border: 0px;
   border-radius: 20px;
-  background: #CC716C;
+  background: #cc716c;
   font-weight: 700;
   color: $white;
 }
@@ -78,4 +78,46 @@
 
 .search__form .react-datepicker-wrapper {
   width: 100%;
+}
+
+/*============= Media Query ============*/
+@mixin search__container {
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px 40px;
+  height: calc(100vh - 160px);
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: $layout-movil) {
+  .search {
+    height: calc(100vh - 160px);
+  }
+  .search__container {
+    border: 0px;
+    border-radius: 0px;
+    padding: 0px 40px;
+    height: calc(100vh - 160px);
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: $layout-movil-landscape) and (orientation: landscape) {
+  .search {
+    height: auto;
+  }
+  .search__form > div:last-child {
+    text-align: right;
+    width: 95%;
+  }
+  .search__container {
+    border: 0px;
+    border-radius: 0px;
+    padding: 0px 40px;
+    height: calc(100vh - 160px);
+    width: 100%;
+    left: 0;
+  }
 }
