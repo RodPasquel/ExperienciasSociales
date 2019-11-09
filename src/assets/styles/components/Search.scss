@@ -22,6 +22,17 @@
   /* padding: 20px 0; */
   background-position: center;
 }
+/* .search:after {
+  content: '';
+  position: absolute;
+  z-index: 99;
+  background-color: rgba(123, 134, 132, 0.8);
+  height: calc(100vh - 80px);
+  width: 100%;
+  transition: 0.4s;
+  opacity: 1;
+  visibility: visible;
+} */
 .search__container {
   display: flex;
   flex-direction: column;
