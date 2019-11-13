@@ -1,0 +1,36 @@
+@import '../Vars.scss';
+
+.inside {
+  padding: 0 5%;
+}
+.insideDescription {
+  display: flex;
+  margin: 0 0 30px 0;
+}
+.contimages{
+  width: 35%;
+  & img{
+    width: 100%;
+  }
+}
+.infoExperience{
+  width: 65%;
+  padding: 50px 0 0 50px;
+}
+.locationMap > div {
+  position: relative;
+  height: 350px;
+}
+
+@media (max-width: $layout-movil) {
+  .insideDescription {
+    display: block;
+  }
+  .contimages,
+  .infoExperience{
+    width: 100%;
+  }
+  .infoExperience{
+    padding: 0;
+  }
+}
