@@ -4,6 +4,7 @@ import Home from '../containers/Home';
 import ResultSearch from '../containers/ResultSearch';
 import NotFound from '../containers/NotFound';
 import Layout from '../components/Layout';
+import Reservation from '../containers/Reservation';
 import InsideExperience from '../containers/InsideExperience';
 
 const App = () => (
@@ -13,6 +14,7 @@ const App = () => (
         <Route exact path='/' component={Home} />
         <Route exact path='/result' component={ResultSearch} />
         <Route exact path='/inside' component={InsideExperience} />
+        <Route exact path='/reservation' component={Reservation} />
         <Route component={NotFound} />
       </Switch>
     </Layout>
