@@ -1,0 +1,56 @@
+@import '../Vars.scss';
+
+.reservation{
+  height: calc(100vh - 80px);
+}
+.infoDescription {
+  display: flex;
+  padding: 2% 15%;
+}
+.infoReservation {
+  width: 65%;
+  padding: 0 5% 0 0;
+}
+.infoPay {
+  width: 25%;
+  padding: 0 2.5%;
+  background-color: rgba(234, 228, 228, 0.5);
+  border-radius: 15px;
+}
+.infoPay input{
+  @include input;
+}
+.infoPay {
+  & h3{
+    margin: 15px 0;
+  }
+}
+.infoPay button {
+  width: 100%;
+  margin: 20px 0;
+}
+
+@media (max-width: $layout-movil) {
+  .reservation {
+    height: auto;
+
+  }
+  .infoDescription {
+    display: block;
+  }
+  .infoReservation,
+  .infoPay{
+    width: auto;
+    padding: 10px 20px;
+  }
+  .infoPay{
+    border-radius: 0;
+  }
+  .infoDescription{
+    padding: 0;
+  }
+  .button{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

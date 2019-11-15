@@ -1,42 +1,88 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
-import '../assets/styles/containers/InsideExperience.scss';
+import React, { Component } from 'react';
+import '../assets/styles/containers/Reservation.scss';
 
-const InsideExperience = () => {
-  return (
-    <div className='inside'>
-      <div className='insideDescription'>
-        {/* Imagen destacada */}
-        <div className='contimages'>
-          <img src='https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='chocolate-cake-on-chopping-board' />
-        </div>
-        {/* Descripción del reservacion */}
-        <div className='infoReservation'>
-          <h2 className='infoTitle'> Revisar y Pagar </h2>
-          <br />
-          <p className='infoDescription'>Puedes agregar más amigos a esta experiencia y confirmar tu reservación. Pueden asistir personas que tengan 10 años o más.</p>
-          <h3>Duración</h3>
-          <p className='infoTime'> 4 horas </p>
-          <br />
+class InsideExperience extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  onChange(e) {
+    const re = /^[0-9\b]+$/;
+    if (e.target.value === '' || re.test(e.target.value)) {
+      this.setState({ value: e.target.value });
+    }
+  }
+
+  /*   onChange(e) {
+      const target = e.target;
+      const name = target.name;
+      const value = target.value;
+      console.log('name', name);
+      console.log('value', value);
+      const re = /^[0-9\b]+$/;
+      if (value === '' || re.test(value)) {
+        this.setState({ [name]: value });
+      }
+    } */
+
+  render() {
+    return (
+      <section className='reservation'>
+        <div className='infoDescription'>
+          {/* Información del reservacion */}
+          <div className='infoReservation'>
+            <h2 className='infoTitle'> Revisar y Pagar </h2>
+            <p className=''>Puedes agregar más amigos a esta experiencia y confirmar tu reservación. Pueden asistir personas que tengan 10 años o más.</p>
+            <h3>Duración</h3>
+            <p className='infoTime'> 4 horas </p>
+            <h3>Costo por persona</h3>
+            <p className='insideCost'> $ 1200 </p>
+          </div>
           {/* Formulario de pago */}
-          <div className='infoPay'>
-            <label htmlFor='inputPeople'> Personas que asistiran</label>
-            <input id='inputPeople' className='input' type='number' min='1' placeholder='1' />
-            <label htmlFor=''>Monto Total</label>
-            <input id='' type='text' pattern='[0-9]' />
+          <form className='infoPay'>
+            <h3>Información para el cobro</h3>
+            <div>
+              <label htmlFor='inputPeople'> Personas que asistiran</label>
+              <input id='inputPeople' className='input' type='number' min='1' max='10' placeholder='1' />
+            </div>
+            <div>
+              <label htmlFor=''>Monto Total</label>
+              <input id='' type='text' pattern='[0-9]' readOnly />
+            </div>
             {/* Datos de la tarjeta */}
+            <h3>Forma de pago</h3>
             <label htmlFor='inputCard'> Numero de la tarjeta</label>
-            <input id='inputCard' type='text' pattern='[0-9]' minLength='18' maxLength='18' size='18' />
+            <input
+              id='inputCard'
+              name='inputCard'
+              type='text'
+              minLength='18'
+              maxLength='18'
+              /* value={this.state.value}
+              onChange={this.onChange} */
+            />
             <label htmlFor='inputExpiration'> Caducidad </label>
             <input id='inputExpiration' type='month' min='2019-01' />
-            <label htmlFor=''> CVV </label>
-            <input type='text' pattern='[0-9]' minLength='3' maxLength='3' size='3' />
+            <label htmlFor='inputCVV'> CVV </label>
+            <input
+              id='inputCVV'
+              name='inputCVV'
+              type='text'
+              minLength='3'
+              maxLength='3'
+              /* value={this.state.value}
+              onChange={this.onChange} */
+            />
             <button className='button' type='button'> Confirmar y pagar </button>
-          </div>
+          </form>
         </div>
-      </div>
-    </div>
-  );
+      </section>
+    );
+  }
 };
 
 export default InsideExperience;

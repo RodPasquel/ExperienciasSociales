@@ -1,23 +1,13 @@
 @import '../Vars.scss';
 
-@mixin input {
-  width: 92%;
-  outline: none;
-  border: 2px solid $white;
-  font-size: 16px;
-  height: 25px;
-  border-radius: 20px;
-  padding: 5px 10px;
-  margin-top: 5px;
-}
-
 .inside {
   padding: 0 5%;
 }
-.insideDescription,
-.infoDescription {
+.insideDescription {
   display: flex;
-  margin: 0 0 30px 0;
+}
+.insideDescription{
+  margin-bottom: 15px;
 }
 .contimages{
   width: 35%;
@@ -25,43 +15,35 @@
     width: 100%;
   }
 }
-.infoExperience,
-.infoReservation{
+.infoExperience{
   width: 65%;
   padding: 50px 0 0 50px;
 }
-
 .infoExperience button {
   float: right;
 }
-
 .locationMap > div {
   position: relative;
   height: 350px;
 }
-
 .insideImages {
   display: inline-flex;
   justify-content: space-between;
   margin-bottom: 20px;
 }
-
 .insideImages img {
   width: 30%;
 }
 
 @media (max-width: $layout-movil) {
-  .insideDescription,
-  .infoDescription {
+  .insideDescription {
     display: block;
   }
   .contimages,
-  .infoExperience,
-  .infoReservation{
+  .infoExperience{
     width: 100%;
   }
-  .infoExperience,
-  .infoReservation{
+  .infoExperience{
     padding: 0;
   }
   .button{

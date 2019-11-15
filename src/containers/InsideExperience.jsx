@@ -4,7 +4,7 @@ import '../assets/styles/containers/InsideExperience.scss';
 
 const InsideExperience = () => {
   return (
-    <div className='inside'>
+    <section className='inside'>
       <div className='insideDescription'>
         {/* Imagen destacada */}
         <div className='contimages'>
@@ -23,7 +23,7 @@ const InsideExperience = () => {
           <h3>Duración</h3>
           <p className='insideTime'> 4 horas </p>
           <h3>Costo por persona</h3>
-          <p className='insideCost'> 1200 </p>
+          <p className='insideCost'> $ 1200 </p>
           <h3>Ubicación</h3>
           <br />
           {/* Mapa de ubicación */}
@@ -34,7 +34,7 @@ const InsideExperience = () => {
           <button className='button' type='button'>Realizar reservación </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
