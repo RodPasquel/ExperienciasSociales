@@ -26,7 +26,7 @@ class Calendar extends Component {
         selected={startDate}
         onChange={this.handleChange}
         minDate={new Date()}
-        dateFormat='dd/MM/yyyy'
+        dateFormat='yyyy/MM/dd'
         placeholderText='Click to select a date'
       />
     );
