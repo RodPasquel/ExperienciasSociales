@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/Menu.scss';
 
 const Menu = () => {
@@ -23,7 +24,7 @@ const Menu = () => {
         </li>
         <li className='navigation__li'>
           <a className='navigation__link' href='#'>
-            Quick links
+            Search
           </a>
         </li>
         <li className='navigation__li'>

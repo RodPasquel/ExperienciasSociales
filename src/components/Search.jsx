@@ -23,10 +23,10 @@ const Search = () => {
             /> */}
             <Calendar />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor='inputPeople'> Personas que asistiran</label>
             <input id='inputPeople' className='input' type='number' min='1' placeholder='1' />
-          </div>
+          </div> */}
           <div>
             <button className='button' type='button'>Buscar</button>
           </div>
