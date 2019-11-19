@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 /* import CalendarRank from './CalendarRank'; */
+import { Link } from 'react-router-dom';
 import Calendar from './Calendar';
 import Background from '../assets/images/background-home.jpg';
 import '../assets/styles/components/Search.scss';
@@ -10,7 +11,7 @@ const Search = () => {
   return (
     <section className='search' style={{ backgroundImage: `url(${Background})` }}>
       <section className='search__container'>
-        <h1 className='search__title'>Busca y reserva alojamiento</h1>
+        <h1 className='search__title'>Busca y reserva una experiencia</h1>
         <form action='' className='search__form'>
           <div>
             <label htmlFor='inputLocation'> Dónde </label>
@@ -28,7 +29,9 @@ const Search = () => {
             <input id='inputPeople' className='input' type='number' min='1' placeholder='1' />
           </div>
           <div>
-            <button className='button' type='button'>Buscar</button>
+            <Link to={`/result`}> 
+              <button className='button' type='button'>Buscar</button>
+            </Link>
           </div>
         </form>
       </section>
