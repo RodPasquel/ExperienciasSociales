@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from './reducers';
 import App from './routes/App';
+import Firebase, { FirebaseContext } from './components/Firebase';
 
 const initialState = {
   'data': [
@@ -144,7 +145,9 @@ const store = createStore(reducer, initialState);
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <FirebaseContext.Provider value={new Firebase()}>
+      <App />
+    </FirebaseContext.Provider>
   </Provider>,
   document.getElementById('app'),
 );
