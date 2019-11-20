@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpg';
 import '../assets/styles/components/Header.scss';
 import '../assets/styles/components/Menu.scss';
+
 
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
     <header className='header'>
-      <img className='header__img' src={logo} alt='BookingSystemPlatzi' />
+      <Link to={`/result`}> 
+        <img className='header__img' src={logo} alt='BookingSystemPlatzi' />
+      </Link>  
       <span
         className='header--hamburger material-icons'
         onClick={() => setOpenMenu(!openMenu)}

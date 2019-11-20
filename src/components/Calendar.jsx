@@ -16,11 +16,9 @@ class Calendar extends Component {
   */
 const Calendar = (props) => {
   const { startDate } = props;
+
   const handleChange = (startDate) => {
-    props.setState({
-    //this.setState({
-      startDate,
-    });
+    props.setState(startDate);
     console.log('start date es: ', startDate);
   };
 
@@ -30,6 +28,15 @@ const Calendar = (props) => {
   return (
     <DatePicker
       className='divCalendar'
+      selected={startDate}
+      // onChange={this.handleChange}
+      onChange={handleChange}
+      minDate={new Date()}
+      dateFormat='yyyy/MM/dd'
+      //placeholderText='Click to select a date'
+      placeholderText={startDate}
+    /*
+    className='divCalendar'
       minDate={new Date()}
       dateFormat='yyyy/MM/dd'
       selected={startDate}
@@ -37,6 +44,7 @@ const Calendar = (props) => {
       onChange={handleChange}
        placeholderText='Click to select a date'
       //placeholderText={startDate}
+      */
     />
   );
   //}
@@ -44,7 +52,7 @@ const Calendar = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    props.startDate,
+    //startDate: state.startDate,
   };
 };
 
