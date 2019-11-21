@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Component } from 'react';
 import '../assets/styles/containers/Reservation.scss';
+import { Link } from 'react-router-dom';
 
 class InsideExperience extends Component {
   constructor(props) {
@@ -41,7 +42,13 @@ class InsideExperience extends Component {
             <p className='infoTime'> 4 horas </p>
             <h3>Costo por persona</h3>
             <p className='insideCost'> $ 1200 </p>
+            <div>
+              <Link to={`/inside`}> 
+                <button className='button' type='button'>Cancelar</button>
+              </Link>
+            </div>
           </div>
+
           {/* Formulario de pago */}
           <form className='infoPay'>
             <h3>Información para el cobro</h3>

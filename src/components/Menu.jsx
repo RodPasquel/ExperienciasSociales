@@ -13,12 +13,12 @@ const Menu = () => {
       <ul className='navigation__ul'>
         <li className='navigation__li'>
           <a className='navigation__link' href='#'>
-            Loguin
+            Iniciar Sesión
           </a>
         </li>
         <li className='navigation__li'>
           <a className='navigation__link' href='#'>
-            Contact
+            Contacto
           </a>
         </li>
         <li className='navigation__li'>

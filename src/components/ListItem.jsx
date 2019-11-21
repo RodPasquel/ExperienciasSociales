@@ -30,11 +30,8 @@ const ListItem = (props) => {
   );
 };
 
-
-//export default ListItem;
 const mapDispatchToProps = {
 
 }
 
-// export default CarouselItem;
 export default connect(null, mapDispatchToProps)(ListItem);

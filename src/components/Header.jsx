@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <Link to={`/result`}> 
+      <Link to={`/`}> 
         <img className='header__img' src={logo} alt='BookingSystemPlatzi' />
       </Link>  
       <span
@@ -30,12 +30,12 @@ const Header = () => {
         <ul className='navigation__ul'>
           <li className='navigation__li'>
             <a className='navigation__link' href='#'>
-              Loguin
+            Iniciar Sesión
             </a>
           </li>
           <li className='navigation__li'>
             <a className='navigation__link' href='#'>
-              Contact
+              Contacto
             </a>
           </li>
           <li className='navigation__li'>

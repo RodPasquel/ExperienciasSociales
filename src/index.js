@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, compose } from 'redux';
+import { createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
+import fetch from 'node-fetch';
 import reducer from './reducers';
 import App from './routes/App';
 
@@ -113,7 +114,7 @@ const initialState = {
       "image3": "https://images.inmexico.com/2017/12/OneOnly-Palmilla_Temazcal-864x576.jpg"
     },
     {
-      "_id": "5dd1dd9dfbf086ac18c84b71",
+      "_id": "5dd1dd9dfbf086ac18c84b17",
       "title": "La ruta de la miel",
       "description": "Con esta experiencia aprenderÃ¡s sobre la vida y caracterÃ­sticas de las abejas. La producciÃ³n, los tipos y las bondades de la miel y sabrÃ¡s cÃ³mo identificar una miel pura. En el recorrido podrÃ¡s extraer y degustar miel de una colmena de forma segura.",
       "problems": [
@@ -139,7 +140,7 @@ const initialState = {
       "image3": "https://image.freepik.com/foto-gratis/abeja_95678-8.jpg"
     },
     {
-      "_id": "5dd1dd9dfbf086ac18c84b71",
+      "_id": "5dd1dd9dfbf086ac18c84b61",
       "title": "Elabora tu propio alebrije",
       "description": "Ven y conoce la historia y proceso de elaboraciÃ³n de una de las artesanÃ­as mÃ¡s representativas de nuestro paÃ­s: los alebrijes.",
       "problems": [
@@ -165,7 +166,7 @@ const initialState = {
       "image3": "https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/inline-images/alebrijes-arrazola.jpg"
     },
     {
-      "_id": "5dd1dd9dfbf086ac18c84b71",
+      "_id": "5dd1dd9dfbf086ac18c85c71",
       "title": "La ruta del cafÃ©",
       "description": "Ven a esta grandiosa cata de cafÃ© mexicano. Conoce su origen y todo el proceso que sigue desde el productor hasta que llega a tu tazaâ€",
       "problems": [
@@ -191,8 +192,9 @@ const initialState = {
     },
   ]
 };
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(reducer, initialState, composeEnhancers());
+const store = createStore(reducer, initialState, composeEnhancers()); //applyMiddleware(thunk));//
 
 ReactDOM.render(
   <Provider store={store}>

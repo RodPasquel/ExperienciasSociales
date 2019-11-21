@@ -1,3 +1,5 @@
+@import "../Vars.scss";
+
 .listResults {
   padding: 0 5%;
 }
@@ -11,11 +13,36 @@
 
 .listItem-item__img {
   width: 100%;
-  height: auto;
+  height: 60%;
   object-fit: cover;
+  object-position: 50% 10%;
+  border-radius: 10px;
+  margin-top: 7px;
+  transform-origin: center top;
 }
 
 .listItem-item {
-  width: 23%;
+  //background: #FBF1B9;
+  // width: 23%;
   padding: 0 1%;
+  width: 200px;
+  height: 250px;
+  border-radius: 10px;
+  margin-top: 7px;
+  margin-right: 10px;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.listItem-item__details--title{
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.listItem-item__details--subtitle{
+  color: $purple;
+  font-size: 12px;
 }
