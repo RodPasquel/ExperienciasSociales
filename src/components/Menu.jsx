@@ -26,11 +26,6 @@ const Menu = () => {
             Quick links
           </a>
         </li>
-        <li className='navigation__li'>
-          <a className='navigation__link' href='#'>
-            Launchpad
-          </a>
-        </li>
       </ul>
     </nav>
   );
