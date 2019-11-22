@@ -5,7 +5,6 @@ import logo from '../assets/images/logo.jpg';
 import '../assets/styles/components/Header.scss';
 import '../assets/styles/components/Menu.scss';
 
-
 const Header = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -44,7 +43,7 @@ const Header = () => {
               Busqueda
             </Link>
           </li>
-          <li className='navigation__li'>
+          {/* <li className='navigation__li'>
             <Link className='navigation__link' to='/login'>
               Other
             </Link>
@@ -53,7 +52,7 @@ const Header = () => {
             <Link className='navigation__link' to='/login'>
               Other
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

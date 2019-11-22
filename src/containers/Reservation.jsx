@@ -15,20 +15,9 @@ class InsideExperience extends Component {
     const re = /^[0-9\b]+$/;
     if (e.target.value === '' || re.test(e.target.value)) {
       this.setState({ value: e.target.value });
+      /* this.setState({ [e.target.name]: e.target.value }); */
     }
   }
-
-  /*   onChange(e) {
-      const target = e.target;
-      const name = target.name;
-      const value = target.value;
-      console.log('name', name);
-      console.log('value', value);
-      const re = /^[0-9\b]+$/;
-      if (value === '' || re.test(value)) {
-        this.setState({ [name]: value });
-      }
-    } */
 
   render() {
     return (
@@ -43,7 +32,7 @@ class InsideExperience extends Component {
             <h3>Costo por persona</h3>
             <p className='insideCost'> $ 1200 </p>
             <div>
-              <Link to={`/inside`}> 
+              <Link to='/inside'>
                 <button className='button' type='button'>Cancelar</button>
               </Link>
             </div>

@@ -1,5 +1,12 @@
 @import "../Vars.scss";
 
+.results__title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: oblique;
+}
+
 .listResults {
   padding: 0 5%;
 }
@@ -26,7 +33,7 @@
   // width: 23%;
   padding: 0 1%;
   width: 200px;
-  height: 250px;
+  height: 350px;
   border-radius: 10px;
   margin-top: 7px;
   margin-right: 10px;
