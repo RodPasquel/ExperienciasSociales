@@ -5,6 +5,11 @@ const reducer = (state, action) => {
         ...state,
         startDate: action.payload,
       };
+    case 'GET_STATE':
+      return {
+        ...state,
+        startDate: action.payload,
+      };
     default:
       return state;
   }

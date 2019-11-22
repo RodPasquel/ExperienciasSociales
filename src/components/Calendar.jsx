@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DatePicker from 'react-datepicker';
-import { setState } from '../actions';
+import { setState, getState } from '../actions';
 import 'react-datepicker/dist/react-datepicker.css';
 
 // CSS Modules, react-datepicker-cssmodules.css
@@ -19,7 +19,6 @@ const Calendar = (props) => {
 
   const handleChange = (startDate) => {
     props.setState(startDate);
-    console.log('start date es: ', startDate);
   };
 
 // render() {

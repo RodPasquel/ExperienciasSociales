@@ -4,20 +4,20 @@ import { connect } from 'react-redux';
 import '../assets/styles/containers/InsideExperience.scss';
 import { Link } from 'react-router-dom';
 
-
 const InsideExperience = (props) => {
+
   const { id, title, description, image2, image3, cost, duration } = props;
-  console.log("title", title)
+
   return (
     <section className='inside'>
       <div className='insideDescription'>
         {/* Imagen destacada */}
         <div className='contimages'>
-        <img
-          className='listItem-item__img'
-          src={image3}
-          alt={title} 
-        />
+          <img
+            className='listItem-item__img'
+            src={image3}
+            alt={title} 
+          />
           {/* <img src='https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' alt='chocolate-cake-on-chopping-board' /> */}
         </div>
         {/* Descripción del aparatdo */}
@@ -57,9 +57,16 @@ const InsideExperience = (props) => {
             <GoogleMaps />
           </div>
           <br />
-          <Link to={`/reservation`}> 
-            <button className='button' type='button'>Realizar reservación </button>
-          </Link>
+          <div>
+            <Link to={`/result`}> 
+              <button type="submit" className="button">Back</button>
+            </Link>
+          </div>
+          <div>
+            <Link to={`/reservation`}> 
+              <button className='button' type='button'>Realizar reservación </button>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
