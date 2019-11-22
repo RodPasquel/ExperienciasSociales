@@ -10,6 +10,11 @@ const reducer = (state, action) => {
         ...state,
         startDate: action.payload,
       };
+    case 'VIEW_EXPERIENCES':
+      return {
+        ...state,
+        view: [...state.view, action.payload],
+      };
     default:
       return state;
   }

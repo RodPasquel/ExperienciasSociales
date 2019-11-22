@@ -1,13 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { viewExperiences } from '../actions';
 
 const ListItem = (props) => {
   const { id, title, image3, cost, duration } = props;
 
+  const handleViewExperiences = () => {
+    props.viewExperiences({
+      id, title, image3, cost, duration,
+    });
+  };
+
   return (
     <div className='listItem-item'>
-      <Link to='/inside'>
+      <Link to='/inside' onClick={() => handleViewExperiences()}>
         <img
           className='listItem-item__img'
           src={image3}
@@ -28,7 +35,7 @@ const ListItem = (props) => {
 };
 
 const mapDispatchToProps = {
-
+  viewExperiences,
 };
 
 export default connect(null, mapDispatchToProps)(ListItem);

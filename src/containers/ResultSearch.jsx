@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { connect } from 'react-redux';
 import Results from '../components/Results';
@@ -16,7 +17,6 @@ async function getData(url) {
 //const { experiences } = getData(URL);
 */
 
-
 const ResultSearch = (props) => {
   const { experiences } = props;
 
@@ -24,30 +24,24 @@ const ResultSearch = (props) => {
     <>
       <Results>
         <ListResults>
-          {experiences.map(item => 
-            <ListItem key={item._id} {...item} />
-          )}
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
-          <ListItem />
+          {experiences.map((item) => <ListItem key={item._id} {...item} />)}
         </ListResults>
       </Results>
     </>
   );
 };
 
-//export default ResultSearch;
-
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
     experiences: state.experiences,
   };
 };
+
+/*
+const mapDispatchToProps = {
+  viewExperiences,
+};
+
+ */
 
 export default connect(mapStateToProps, null)(ResultSearch);
