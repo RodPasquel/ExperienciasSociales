@@ -24,12 +24,12 @@ const Search = () => {
             /> */}
             <Calendar />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor='inputPeople'> Personas que asistiran</label>
             <input id='inputPeople' className='input' type='number' min='1' placeholder='1' />
-          </div>
+          </div> */}
           <div>
-            <Link to={`/result`}> 
+            <Link to='/result'>
               <button className='button' type='button'>Buscar</button>
             </Link>
           </div>

@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.jpg';
@@ -10,9 +11,9 @@ const Header = () => {
 
   return (
     <header className='header'>
-      <Link to={`/result`}> 
+      <Link to='/result'>
         <img className='header__img' src={logo} alt='BookingSystemPlatzi' />
-      </Link>  
+      </Link>
       <span
         className='header--hamburger material-icons'
         onClick={() => setOpenMenu(!openMenu)}
@@ -24,29 +25,34 @@ const Header = () => {
           <span className='material-icons navigation--icon'>
             account_circle
           </span>
-          <a href='#'> Nombre de usuario </a>
+          <h3> Nombre de usuario </h3>
           <a href='#'>Cerrar Sesión</a>
         </div>
         <ul className='navigation__ul'>
           <li className='navigation__li'>
-            <a className='navigation__link' href='#'>
-              Loguin
-            </a>
+            <Link className='navigation__link' to='/login'>
+              Login
+            </Link>
           </li>
           <li className='navigation__li'>
-            <a className='navigation__link' href='#'>
-              Contact
-            </a>
+            <Link className='navigation__link' to='/singup'>
+              Registrate
+            </Link>
           </li>
           <li className='navigation__li'>
-            <a className='navigation__link' href='#'>
-              Item 1
-            </a>
+            <Link className='navigation__link' to='/'>
+              Busqueda
+            </Link>
           </li>
           <li className='navigation__li'>
-            <a className='navigation__link' href='#'>
-              Item 2
-            </a>
+            <Link className='navigation__link' to='/login'>
+              Other
+            </Link>
+          </li>
+          <li className='navigation__li'>
+            <Link className='navigation__link' to='/login'>
+              Other
+            </Link>
           </li>
         </ul>
       </nav>

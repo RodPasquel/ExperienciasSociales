@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/components/Menu.scss';
 
 const Menu = () => {
   /* console.log('state open menu ', open); */
+  console.log('carga del meu');
   return (
     <nav className='navigation'>
       <div className='navigation__profile'>
@@ -12,18 +14,18 @@ const Menu = () => {
       </div>
       <ul className='navigation__ul'>
         <li className='navigation__li'>
+          <Link to='/login'>
+            SingIn
+          </Link>
+        </li>
+        <li className='navigation__li'>
           <a className='navigation__link' href='#'>
-            Loguin
+            SingUp
           </a>
         </li>
         <li className='navigation__li'>
           <a className='navigation__link' href='#'>
             Contact
-          </a>
-        </li>
-        <li className='navigation__li'>
-          <a className='navigation__link' href='#'>
-            Quick links
           </a>
         </li>
       </ul>

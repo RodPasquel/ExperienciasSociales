@@ -12,7 +12,8 @@
   background-repeat: no-repeat;
   position: relative;
 }
-.login::before{
+.login::before,
+.registro::before{
   content: '';
   position: absolute;
   top: 0;
@@ -45,6 +46,11 @@
 .registro__container--form label {
   font-size: 14px;
 }
+.login__container--form .button--texto {
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
 .login__container--remember {
   color: #ffffff;
   display: flex;
@@ -58,6 +64,9 @@
 }
 .login__container--remember a:hover {
   text-decoration: underline;
+}
+.login__container--social-media button {
+    width: 100%;
 }
 .login__container--social-media > div {
   display: flex;

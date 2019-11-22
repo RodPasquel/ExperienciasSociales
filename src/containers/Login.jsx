@@ -1,13 +1,12 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import { connect } from 'redux';
 import { Link } from 'react-router-dom';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
-import firebaseConfig from '../firebase';
+import firebaseConfig from '../Firebase/firebase';
 import '../assets/styles/containers/LoginRegister.scss';
-import googleIcon from '../assets/icons/google.png';
-import twitterIcon from '../assets/icons/twitter.png';
 import Background from '../assets/images/background-login.jpg';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
@@ -22,7 +21,8 @@ class Login extends React.Component {
           <form action='' className='login__container--form'>
             <input className='input' type='text' placeholder='Correo' />
             <input className='input' type='text' placeholder='Contraseña' />
-            <button className='button' type='button'> Iniciar sesión </button>
+            {/* <button className='button' type='button'> Iniciar sesión </button> */}
+            <Link className='button button--texto' to='/'>Iniciar sesión</Link>
             <div className='login__container--remember'>
               <label>
                 <input type='checkbox' name='' id='checkbox__record' value='checkbox' />
@@ -34,17 +34,19 @@ class Login extends React.Component {
             </div>
           </form>
           <section className='login__container--social-media'>
-            <div onClick={signInWithGoogle}>
-              <img src={googleIcon} alt='Google' />
-              Iniciar sesión con Google
-            </div>
             <div>
-              <img src={twitterIcon} alt='Google' />
-              Iniciar sesión con Twitter
+              <button className='button' type='button' onClick={signInWithGoogle}>
+                Iniciar sesión con Google
+              </button>
             </div>
+            {/* <div>
+              <button className='button' type='button'>
+                Iniciar sesión con facebook
+              </button>
+            </div> */}
           </section>
           <p className='login__container--register'>
-            No tienes ninguna cuenta <Link to='/register'> Regístrate </Link>
+            No tienes ninguna cuenta <Link to='/singup'> Regístrate </Link>
           </p>
         </section>
       </section>
