@@ -19,7 +19,7 @@ async function getData(url) {
 
 const ResultSearch = (props) => {
   const { experiences } = props;
-
+  console.log('experiences ', experiences);
   return (
     <>
       <Results>
@@ -37,11 +37,8 @@ const mapStateToProps = (state) => {
   };
 };
 
-/*
-const mapDispatchToProps = {
+/* const mapDispatchToProps = {
   viewExperiences,
-};
-
- */
+}; */
 
 export default connect(mapStateToProps, null)(ResultSearch);

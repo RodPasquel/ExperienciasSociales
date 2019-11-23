@@ -13,7 +13,7 @@ const reducer = (state, action) => {
     case 'VIEW_EXPERIENCES':
       return {
         ...state,
-        view: [...state.view, action.payload],
+        experiences: [...state.experiences, action.payload],
       };
     default:
       return state;

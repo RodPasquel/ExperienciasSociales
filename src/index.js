@@ -13,7 +13,7 @@ const initialState = {
     {
       '_id': '5dc3ae6716ecdc3641838849',
       'title': 'Visita a un taller de sombreros',
-      'description': 'Ven y conoce el proceso de elaboraciÃ³n artesanal de un sombrero. Compra directo a los productores y ayúdalos a preservar sus tradiciones y modo de vida.',
+      'description': 'Ven y conoce el proceso de elaboración artesanal de un sombrero. Compra directo a los productores y ayúdalos a preservar sus tradiciones y modo de vida.',
       'problems': [
         'Productores Abandonados',
         'Consumo Local',
@@ -33,9 +33,10 @@ const initialState = {
         'Cultural',
         'Productores',
       ],
-      'image1-cover': 'https://cdn.mexicodestinos.com/lugares/becal-campeche-galeria-min.jpg',
-      'image2': 'https://mundo.sputniknews.com/cultura/201711141073954828-mexico-cultura-conservacion-tradicion-sombreros/',
+      'image1cover': 'https://cdn.mexicodestinos.com/lugares/becal-campeche-galeria-min.jpg',
+      'image2': 'https://cdnmundo2.img.sputniknews.com/images/107395/44/1073954445.jpg',
       'image3': 'http://amigosgrandesmaestros.org/wp-content/uploads/2018/03/Eulogio_Chi_Tzel.jpg',
+      'image4': 'http://www.revistayucatan.com/v1/wp-content/uploads/2019/08/%C2%A1En-agosto-o-en-enero-no-te-quites-el-sombrero-2-1024x682.jpg',
     },
     {
       '_id': '5dc3af2716ecdc364183991b',

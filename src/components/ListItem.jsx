@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 import { viewExperiences } from '../actions';
 
 const ListItem = (props) => {
-  const { id, title, image3, cost, duration } = props;
+  const { _id, title, image3, cost, duration } = props;
 
   const handleViewExperiences = () => {
     props.viewExperiences({
-      id, title, image3, cost, duration,
+      _id, title, image3, cost, duration,
     });
   };
 

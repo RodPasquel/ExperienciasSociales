@@ -21,9 +21,9 @@ const Calendar = (props) => {
     props.setState(startDate);
   };
 
-// render() {
- // return (
-    //const { startDate } = this.state;
+  // render() {
+  // return (
+  //const { startDate } = this.state;
   return (
     <DatePicker
       className='divCalendar'
